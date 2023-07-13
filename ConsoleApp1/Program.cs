@@ -9,7 +9,8 @@ Console.WriteLine(key);
 Console.WriteLine("Generated IV:");
 Console.WriteLine(iv);
 var today=DateTime.Now;
-string value = $"asif.log@gmail.com,898971,{today.ToString()}";
+//asif.log@gmail.com,898971,809,{today.ToString()--->User Email, Organization External Id, Client Id,Issued Date
+string value = $"asif.log@gmail.com,898971,809,{today.ToString()}";
 string encryptedValue = AESEncryption.EncryptQueryParam(value, key, iv);
 Console.WriteLine("Encrypted Value:");
 Console.WriteLine(encryptedValue);
