@@ -13,3 +13,5 @@ C:\WorkingProjects\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\refint\AES-256DotNet
 C:\WorkingProjects\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\AES-256DotNet.pdb
 C:\WorkingProjects\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\AES-256DotNet.genruntimeconfig.cache
 C:\WorkingProjects\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ref\AES-256DotNet.dll
+C:\WorkingProjects\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\WorkingProjects\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\AES-256DotNet.csproj.CopyComplete

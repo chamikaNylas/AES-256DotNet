@@ -1,5 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ConsoleApp1;
+using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+using System.Net.Http.Json;
 
 string key = AESEncryption.GenerateKey();
 string iv = AESEncryption.GenerateIV();
@@ -8,9 +11,16 @@ Console.WriteLine("Generated Key:");
 Console.WriteLine(key);
 Console.WriteLine("Generated IV:");
 Console.WriteLine(iv);
-var today=DateTime.Now;
-//asif.log@gmail.com,898971,809,{today.ToString()--->User Email, Organization External Id, Client Id,Issued Date
-string value = $"asif.log@gmail.com,898971,809,{today.ToString()}";
+var today=DateTime.UtcNow;
+var serrionData = new SessionRequest()
+{
+    Email = "asif.log@gmail.com",
+    OfficeReferenceId = "898971",
+    ClientId = "4509",
+    IssuedDate = today,
+
+};
+string value = JsonConvert.SerializeObject(serrionData);
 string encryptedValue = AESEncryption.EncryptQueryParam(value, key, iv);
 Console.WriteLine("Encrypted Value:");
 Console.WriteLine(encryptedValue);
