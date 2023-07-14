@@ -4,13 +4,8 @@ using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Http.Json;
 
-string key = AESEncryption.GenerateKey();
-string iv = AESEncryption.GenerateIV();
-
-Console.WriteLine("Generated Key:");
-Console.WriteLine(key);
-Console.WriteLine("Generated IV:");
-Console.WriteLine(iv);
+string key ="SHARED_KEY";
+string iv ="INITIALIZATION_VECTOR";
 var today=DateTime.UtcNow;
 var serrionData = new SessionRequest()
 {
@@ -18,7 +13,6 @@ var serrionData = new SessionRequest()
     OfficeReferenceId = "898971",
     ClientId = "4509",
     IssuedDate = today,
-
 };
 string value = JsonConvert.SerializeObject(serrionData);
 string encryptedValue = AESEncryption.EncryptQueryParam(value, key, iv);
